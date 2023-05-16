@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfWeatherApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfWeatherApplication"
+        mc:Ignorable="d"
+        Icon="/Resources/icon.ico"
+        MinHeight="400"
+        MinWidth="500"
+        MaxHeight="700"
+        MaxWidth="1000"
+        Title="Погода" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="349*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+    
+        </Grid.ColumnDefinitions>
+        <StackPanel
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            >
+            <TextBox
+                TextAlignment="Center"
+                Margin="5"
+                MinWidth="200"
+                x:Name="searchTextBox"
+                ></TextBox>
+            <Button
+                Margin="5"
+                Click="searchButton_Click"
+                x:Name="searchButton"
+                >Поиск</Button>
+            
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            >
+            <TextBlock
+                Style="{StaticResource TextBlockStyle}"
+                FontSize="16"
+                x:Name="weatherDescriptionTextBlock"
+                ></TextBlock>
+            
+        </StackPanel>
+    </Grid>
+</Window>
