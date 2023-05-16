@@ -125,7 +125,7 @@ namespace WpfWeatherApplication
 
                 var cityCoordinates = JsonSerializer.Deserialize<CityGeoObject[]>(response);
 
-                if (cityCoordinates == null || cityCoordinates.Length < 0)
+                if (cityCoordinates == null || cityCoordinates.Length < 1)
                 {
                     MessageBox.Show("Ничего не найдено!");
                     return null;
